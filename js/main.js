@@ -25,7 +25,11 @@ function updateTrains() {
 
   mapData.trains.forEach(train => {
 
-    train.x += train.speed;
+    train.position += 0.001 * train.speed;
+
+    if(train.position > 1) {
+      train.position = 1;
+    }
 
   });
 }
