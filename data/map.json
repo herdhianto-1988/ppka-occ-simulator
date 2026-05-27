@@ -27,13 +27,22 @@
       "id": "SIG_A",
       "x": 250,
       "y": 200,
-      "aspect": "red"
+      "aspect": "green"
     },
     {
       "id": "SIG_B",
       "x": 550,
       "y": 200,
       "aspect": "red"
+    }
+  ],
+
+  "trains": [
+    {
+      "id": "KA1",
+      "x": 120,
+      "y": 200,
+      "speed": 1
     }
   ]
 }
