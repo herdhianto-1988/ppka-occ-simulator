@@ -1,4 +1,4 @@
-export async function renderMap() {
+export async function renderMap(mapData) {
 
   const response = await fetch("./data/map.json");
 
