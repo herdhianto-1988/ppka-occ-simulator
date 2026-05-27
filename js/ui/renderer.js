@@ -62,4 +62,28 @@ export async function renderMap() {
     `;
   });
 
+  // Render trains
+  mapData.trains.forEach(train => {
+  
+    svg.innerHTML += `
+      <rect
+        x="${train.x - 15}"
+        y="${train.y - 10}"
+        width="30"
+        height="20"
+        fill="cyan"
+        rx="4"
+      />
+  
+      <text
+        x="${train.x - 10}"
+        y="${train.y - 15}"
+        fill="white"
+        font-size="12"
+      >
+        ${train.id}
+      </text>
+    `;
+  });
+    
 }
