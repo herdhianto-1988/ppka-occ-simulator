@@ -40,8 +40,8 @@
   "trains": [
     {
       "id": "KA1",
-      "x": 120,
-      "y": 200,
+      "track": "TRACK_1",
+      "position": 0,
       "speed": 1
     }
   ]
