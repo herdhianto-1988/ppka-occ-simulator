@@ -61,10 +61,35 @@ export async function renderMap(mapData) {
   // Render trains
   mapData.trains.forEach(train => {
   
+    const track =
+      mapData.tracks.find(
+        t => t.id === train.track
+      );
+  
+    const fromStation =
+      mapData.stations.find(
+        s => s.id === track.from
+      );
+  
+    const toStation =
+      mapData.stations.find(
+        s => s.id === track.to
+      );
+  
+    const x =
+      fromStation.x +
+      (toStation.x - fromStation.x)
+      * train.position;
+  
+    const y =
+      fromStation.y +
+      (toStation.y - fromStation.y)
+      * train.position;
+  
     svg.innerHTML += `
       <rect
-        x="${train.x - 15}"
-        y="${train.y - 10}"
+        x="${x - 15}"
+        y="${y - 10}"
         width="30"
         height="20"
         fill="cyan"
@@ -72,8 +97,8 @@ export async function renderMap(mapData) {
       />
   
       <text
-        x="${train.x - 10}"
-        y="${train.y - 15}"
+        x="${x - 10}"
+        y="${y - 15}"
         fill="white"
         font-size="12"
       >
