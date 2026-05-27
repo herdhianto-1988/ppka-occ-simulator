@@ -1,0 +1,39 @@
+{
+  "stations": [
+    {
+      "id": "STA_A",
+      "name": "STA A",
+      "x": 100,
+      "y": 200
+    },
+    {
+      "id": "STA_B",
+      "name": "STA B",
+      "x": 700,
+      "y": 200
+    }
+  ],
+
+  "tracks": [
+    {
+      "id": "TRACK_1",
+      "from": "STA_A",
+      "to": "STA_B"
+    }
+  ],
+
+  "signals": [
+    {
+      "id": "SIG_A",
+      "x": 250,
+      "y": 200,
+      "aspect": "red"
+    },
+    {
+      "id": "SIG_B",
+      "x": 550,
+      "y": 200,
+      "aspect": "red"
+    }
+  ]
+}
