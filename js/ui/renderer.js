@@ -1,9 +1,5 @@
 export async function renderMap(mapData) {
 
-  const response = await fetch("./data/map.json");
-
-  const mapData = await response.json();
-
   const svg = document.getElementById("railway-map");
 
   svg.innerHTML = "";
